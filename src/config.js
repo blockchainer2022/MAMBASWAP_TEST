@@ -99,7 +99,7 @@ export const contractAbi = [
   },
   {
     inputs: [],
-    name: "getLPTokensBalance",
+    name: "getLPLockedTokensBalance",
     outputs: [{ internalType: "uint256", name: "liquidity", type: "uint256" }],
     stateMutability: "view",
     type: "function",
@@ -137,17 +137,6 @@ export const contractAbi = [
     name: "owner",
     outputs: [{ internalType: "address", name: "", type: "address" }],
     stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
-      { internalType: "uint256", name: "_lpTokens", type: "uint256" },
-      { internalType: "uint256", name: "_amountTokenMin", type: "uint256" },
-      { internalType: "uint256", name: "_amountETHMin", type: "uint256" },
-    ],
-    name: "removeLiquidityETH",
-    outputs: [],
-    stateMutability: "nonpayable",
     type: "function",
   },
   {
@@ -207,15 +196,6 @@ export const contractAbi = [
     type: "function",
   },
   {
-    inputs: [
-      { internalType: "address", name: "_factoryAddress", type: "address" },
-    ],
-    name: "updateFactoryAddress",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
     inputs: [{ internalType: "uint256", name: "_ICOPrice", type: "uint256" }],
     name: "updateICOPrice",
     outputs: [],
@@ -255,15 +235,6 @@ export const contractAbi = [
     type: "function",
   },
   {
-    inputs: [
-      { internalType: "address", name: "_wBNBAddress", type: "address" },
-    ],
-    name: "updateWBNBAddress",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
     inputs: [],
     name: "wBnb",
     outputs: [{ internalType: "address", name: "", type: "address" }],
@@ -285,6 +256,5 @@ export const contractAbi = [
     type: "function",
   },
 ];
-
 // export const contractAddress = "0x7026e274099f75aBf6670eaE5e43AFD78027db68";
-export const contractAddress = "0x727154D02239A687C57FAC003ca50D95EcDAEc9a";
+export const contractAddress = "0xbbC8984A4542609B7A4775ACF6B5DD1052EeB9CB";
