@@ -1,5 +1,4 @@
 export const contractAbi = [
-  { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {
     anonymous: false,
     inputs: [
@@ -53,20 +52,10 @@ export const contractAbi = [
     type: "function",
   },
   {
-    inputs: [
-      { internalType: "uint256", name: "_amountTokenDesired", type: "uint256" },
-      { internalType: "uint256", name: "_amountETHMin", type: "uint256" },
-    ],
+    inputs: [],
     name: "addLiquidity",
     outputs: [],
     stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "basePrice",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
     type: "function",
   },
   {
@@ -85,6 +74,20 @@ export const contractAbi = [
   },
   {
     inputs: [],
+    name: "claimInvestment",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "dexListingRate",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
     name: "endTime",
     outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
     stateMutability: "view",
@@ -98,6 +101,20 @@ export const contractAbi = [
     type: "function",
   },
   {
+    inputs: [{ internalType: "address", name: "_address", type: "address" }],
+    name: "getBNBInvestment",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getContractTokenBalance",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [],
     name: "getLPLockedTokensBalance",
     outputs: [{ internalType: "uint256", name: "liquidity", type: "uint256" }],
@@ -106,7 +123,7 @@ export const contractAbi = [
   },
   {
     inputs: [],
-    name: "getTokenSupply",
+    name: "getLiquidableTokensBalance",
     outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
     stateMutability: "view",
     type: "function",
@@ -119,9 +136,23 @@ export const contractAbi = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
-    name: "icoBuyers",
+    inputs: [],
+    name: "icoBuyersCount",
     outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "icoFinalized",
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "icoStarted",
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
     stateMutability: "view",
     type: "function",
   },
@@ -134,16 +165,16 @@ export const contractAbi = [
   },
   {
     inputs: [],
-    name: "owner",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
+    name: "lockedBNBbalance",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
     stateMutability: "view",
     type: "function",
   },
   {
     inputs: [],
-    name: "renounceOwnership",
-    outputs: [],
-    stateMutability: "nonpayable",
+    name: "owner",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
+    stateMutability: "view",
     type: "function",
   },
   {
@@ -155,15 +186,15 @@ export const contractAbi = [
   },
   {
     inputs: [],
-    name: "startTime",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
+    name: "startICO",
+    outputs: [],
+    stateMutability: "nonpayable",
     type: "function",
   },
   {
     inputs: [],
-    name: "token",
-    outputs: [{ internalType: "contract IBEP20", name: "", type: "address" }],
+    name: "startTime",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
     stateMutability: "view",
     type: "function",
   },
@@ -226,15 +257,6 @@ export const contractAbi = [
     type: "function",
   },
   {
-    inputs: [
-      { internalType: "address", name: "_tokenAddress", type: "address" },
-    ],
-    name: "updateTokenAddress",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
     inputs: [],
     name: "wBnb",
     outputs: [{ internalType: "address", name: "", type: "address" }],
@@ -257,4 +279,4 @@ export const contractAbi = [
   },
 ];
 // export const contractAddress = "0x7026e274099f75aBf6670eaE5e43AFD78027db68";
-export const contractAddress = "0xbbC8984A4542609B7A4775ACF6B5DD1052EeB9CB";
+export const contractAddress = "0xb05c7D0E023C8Bb7C824A7Eb531749AE61Dd95e4";

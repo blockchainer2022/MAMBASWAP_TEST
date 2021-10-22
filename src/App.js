@@ -151,7 +151,9 @@ function App() {
         type: "success",
         position: toast.POSITION.BOTTOM_CENTER,
       });
-      const totalsupply = await contract.methods.getTokenSupply().call();
+      const totalsupply = await contract.methods
+        .getContractTokenBalance()
+        .call();
       // const finalTotalSupply = window.web3.utils.fromWei(totalsupply, "ether");
       // console.log("totalSupply:", totalsupply);
       setTotalSupply(totalsupply);
