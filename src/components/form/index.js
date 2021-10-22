@@ -39,6 +39,7 @@ const Index = ({
     notation: "compact",
     compactDisplay: "short",
   }).format(icoPrice);
+
   const submitHandler = (e) => {
     e.preventDefault();
     if (!account) {

@@ -157,7 +157,7 @@ function App() {
       // const finalTotalSupply = window.web3.utils.fromWei(totalsupply, "ether");
       // console.log("totalSupply:", totalsupply);
       setTotalSupply(totalsupply);
-      console.log("total supply", totalsupply);
+      console.log("total supply", totalsupply / 1000000000);
 
       const price = await contract.methods.ICOPrice().call();
       setPrice(price / 1000000000);

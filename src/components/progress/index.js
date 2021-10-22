@@ -6,7 +6,7 @@ const Index = React.memo(
     const total = new Intl.NumberFormat("en-GB", {
       notation: "compact",
       compactDisplay: "short",
-    }).format(totalSupply / 100);
+    }).format(totalSupply);
 
     const total2 = new Intl.NumberFormat("en-GB", {
       notation: "compact",
