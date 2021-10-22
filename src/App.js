@@ -160,15 +160,16 @@ function App() {
       console.log("total supply", totalsupply);
 
       const price = await contract.methods.ICOPrice().call();
-      setPrice(price);
+      setPrice(price / 1000000000);
+      console.log("Icoprice:", price / 1000000000);
       const endTime = await contract.methods.endTime().call();
       console.log("endTime:", endTime);
       const startTime = await contract.methods.startTime().call();
       console.log("Start time:", startTime);
       const ICOtarget = await contract.methods.ICOTarget().call();
-      console.log("IcoTARGET:", ICOtarget);
+      console.log("IcoTARGET:", ICOtarget / 1000000000);
       // const convertedICOPrice = Web3.utils.fromWei(price);
-      setIcoPrice(price);
+      setIcoPrice(price / 1000000000);
       // console.log("icoprice:", convertedICOPrice);
       const tokensold = await contract.methods.tokenSold().call();
       // const finalTokenSold = window.web3.utils.fromWei(tokensold, "ether");
@@ -181,9 +182,9 @@ function App() {
             {
               startTime: startTime,
               endTime: endTime,
-              ICOprice: price,
-              ICOtarget: ICOtarget,
-              total_supply: totalsupply,
+              ICOprice: price / 1000000000,
+              ICOtarget: ICOtarget / 1000000000,
+              total_supply: totalsupply / 1000000000,
               total_sold: tokensold,
             }
           );
